@@ -1,7 +1,34 @@
-#!/usr/bin/env ruby 
+#!/usr/bin/env ruby
 
-require 'pry'
+# require 'pry'
 require_relative '../config/environment'
 
+# binding.pry
+# "pls"
+
+gold_digger = Song.new(name: "Gold Digger", album: "Late Registration")
+
+puts "gold_digger.name: ", gold_digger.name
+puts "gold_digger.album: ", gold_digger.album
+
+# NOTE: This is the related SQL command that would be used to save the song to the database itself:
+# INSERT INTO songs (name, album)
+# VALUES ("Gold Digger", "Late Registration");
+
+gold_digger.save()
+
+hello = Song.new(name: "Hello", album: "25")
+
+puts "hello.name: ", hello.name
+puts "hello.album: ", hello.album
+
+# NOTE: This is the related SQL command that would be used to save the song to the database itself:
+# INSERT INTO songs (name, album)
+# VALUES ("Hello", "25");
+
+hello.save()
+
+ninety_nine_problems = Song.new(name: "99 Problems", album: "The Black Album")
+ninety_nine_problems.save()
+
 binding.pry
-"pls"
